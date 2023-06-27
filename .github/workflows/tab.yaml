@@ -20,11 +20,12 @@ jobs:
       uses: tj-actions/changed-files@v35
 
     - name: count tabs
-          echo "HelloWorld"
       run: |
         for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
           echo "File $file has `grep -o $'\t' $file | wc -l` TAB." >> nc_report.log
         done
+          echo "HelloWorld"
+
 
     - name: Upload report
       uses: actions/upload-artifact@v2
