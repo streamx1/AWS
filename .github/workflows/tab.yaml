@@ -9,7 +9,7 @@ on:
 
 jobs:
   prepare:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
 
     - name: action1
