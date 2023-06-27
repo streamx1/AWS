@@ -23,6 +23,7 @@ jobs:
       run: |
         for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
           echo "File $file has `grep -o $'\t' $file | wc -l` TAB." >> nc_report.log
+          echo "HelloWorld"
         done
 
     - name: Upload report
